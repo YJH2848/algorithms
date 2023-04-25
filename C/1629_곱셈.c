@@ -4,14 +4,14 @@ unsigned long long int a, b, c, save;
 
 unsigned long long int calc(unsigned long long int A, unsigned long long int B){
 	if(B == 1){
-	return A % c;
+		return A % c;
 	} 
 	unsigned long long int result = calc(A, B/2);
 	result = (result * result) % c;
 	if (B % 2 == 0) {
-    	return result;
+    		return result;
 	} else {
-    	return (result * A) % c;
+    		return (result * A) % c;
 	}
 }
 
